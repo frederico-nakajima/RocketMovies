@@ -13,17 +13,38 @@ export const Container = styled.header`
 
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
     padding: 0 80px;
 
   
 
-`
+`;
+
+export const Brand = styled.div`
+    
+    >h2{
+        font-size: 24px;
+        color:${({theme}) => theme.COLORS.PINK} ;
+    }
+`;
+
+export const InputHeader = styled.input`
+    width: 100%;
+    height: 56px;
+    margin: 24px 64px;
+    background-color: ${({theme}) => theme.COLORS.BACKGROUND_900};
+    color: ${({theme}) => theme.COLORS.GRAY_300};
+    border-radius:10px;
+    border: none;
+    padding: 19px 24px;
+
+`;
 
 export const Profile = styled(Link)`
     display: flex;
-    align-items: center;
-
+    flex-shrink: 0;
+   
+   
 
 
     >img{
@@ -36,35 +57,24 @@ export const Profile = styled(Link)`
     >div{
         display: flex;
         flex-direction: column;
-        margin-left: 16px;
-        line-height: 24px;
-
-
-        span{
+        align-items: flex-end;
+        justify-content: center;
+        
+        margin-right: 9px;
+        >span{
             font-size: 14px;
-            color:${({theme}) => theme.COLORS.GRAY_100}
-
+            color:${({theme}) => theme.COLORS.GRAY_300};
+          
         }
 
-        strong{
-            font-size: 18px;
+        >strong{
+            font-size: 14px;
             color:${({theme}) => theme.COLORS.WHITE};
-
+           
         }
     }
 
 `;
 
-export const Logout = styled.button`
-    border: none;
-    background: none;
 
-    >svg{
-        color:${({theme}) => theme.COLORS.GRAY_100};
-        font-size: 24px;
-    }
-
-
-
-`
 
