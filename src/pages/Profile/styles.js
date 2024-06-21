@@ -9,17 +9,24 @@ export const Container = styled.div`
         width: 100%;
         height: 144px;
 
-        background: ${({theme}) => theme.COLORS. BACKGROUND_900};
+        background: ${({theme}) => theme.COLORS.BACKGROUND_BROWN};
 
         display: flex;
         align-items: center;
 
         padding: 0 124px;
 
-        svg{
-            color: ${({theme}) => theme.COLORS. GRAY_100};
-            font-size: 24px;
+        >a{
+        display: flex;  
+        align-items: center; 
+        
+        color: ${({ theme }) => theme.COLORS.PINK};
+        align-self: center;
+        svg {
+            margin-right: 8px; 
+          
         }
+    }
     }
 `;
 
