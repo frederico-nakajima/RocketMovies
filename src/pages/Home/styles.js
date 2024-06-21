@@ -56,7 +56,7 @@ padding: 64px 64px 0;
 export const Content = styled.div`
     grid-area: content;  
     padding:0 64px ;
-    overflow-y: auto;
+    
 `;
 
 export const NewNote = styled(Link)`
@@ -65,7 +65,7 @@ export const NewNote = styled(Link)`
     background-color:${({theme}) => theme.COLORS.PINK};
     color:${({theme}) => theme.COLORS.BACKGROUND_900};
     border: none;
-
+    
     display: flex;
     align-items: center;
     justify-content: center;

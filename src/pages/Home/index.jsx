@@ -38,6 +38,20 @@ export function Home(){
                     />
 
                 </Section>
+                <Section>
+                    <Note data={{
+                        title:'React',
+                        tags: [
+                            {id:'1', name: 'react'},
+                            {id:'2', name: 'rocketseat'}
+                        ]
+                        }}
+                    />
+
+                </Section>
+             
+
+              
                 
             </Content>
 
