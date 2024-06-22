@@ -6,31 +6,104 @@ export const Container = styled.div`
     height: 100vh;
 
     display: grid;
-    grid-template-rows: 105px auto;
+    grid-template-rows: 105px 85px auto;
     grid-template-areas:
     "header"
+    "link"
     "content";
+
+    ::-webkit-scrollbar{
+        width: 6px;
+            
+
+    }
+    ::-webkit-scrollbar-thumb{
+        background-color: ${({ theme }) => theme.COLORS.PINK};
+        border-radius: 6px;
+    }
+   
 
     >main{
         grid-area: content;
-        overflow-y: auto;
+
+        width: 1137px;
+        overflow-y: scroll;
+        padding-right: 24px;
+        margin: 0 auto 85px;
+
+       
+      
+
+        .inputs{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            margin: 40px 0;
+
+        }
+        .buttons{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+
+            :nth-child(1){
+                background-color: ${({ theme }) => theme.COLORS.BACKGROUND_1000};
+                color: ${({ theme }) => theme.COLORS.PINK};
+            }
+            :nth-child(2){
+                color: ${({ theme }) => theme.COLORS.BACKGROUND_1000};
+            }
+            
+        }
+        
+       
+
+        .tags{
+            display: flex;
+            align-items: center;
+            height: 88px;
+            gap: 24px;
+            flex-wrap: wrap;
+            background-color: ${({ theme }) => theme.COLORS.BACKGROUND_1000};
+            padding: 16px;
+            border-radius: 8px;
+
+        
+        }
     }
 
-    .tags{
+   
+            
+
+    
+
+`;
+
+export const TopLink = styled.div`
+    
+    margin:40px auto 24px auto ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1137px;
+    color: ${({ theme }) => theme.COLORS.PINK}; 
+
+    >a{
+        color: ${({ theme }) => theme.COLORS.PINK};
         display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        
-        
-    }
+        align-items: center;
+     }
+
 
 `;
 
 
 export const Form = styled.form`
-    max-width: 550px;
-    margin: 38px auto;
-
+    
+    margin: 0 auto 85px;
+    height: 732px;
     >header{
         display: flex;
         align-items: center;
@@ -38,11 +111,8 @@ export const Form = styled.form`
 
         margin-bottom: 36px;
 
-        a{
-            font-size: 20px;
-            color: ${({theme}) => theme.COLORS.GRAY_100};
-        }
+       
     }
-
+    
 
 `;

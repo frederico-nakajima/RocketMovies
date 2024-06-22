@@ -3,6 +3,7 @@ import backgroundImg from '../../assets/something-magical-SdjA-_Xzuxg-unsplash 1
 
 export const Container = styled.div`
     height: 100vh;
+    
 
     display: flex;
     align-items: stretch;
@@ -13,7 +14,7 @@ export const Container = styled.div`
 
 export const Form = styled.form`
     padding: 0 136px;
-
+    width:637px;
     display: flex;
     flex-direction: column;
     justify-content: center;
