@@ -11,12 +11,17 @@ export const Container = styled.header`
     border-bottom-style:solid ;
     border-bottom-color:${({theme}) => theme.COLORS.BACKGROUND_700} ;
 
+  
+    
+
+  >main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 123px;
+    width: 1167px;
+    margin: 0 auto;
 
-  
+  }
 
 `;
 
@@ -29,7 +34,7 @@ export const Brand = styled.div`
 `;
 
 export const InputHeader = styled.input`
-    width: 100%;
+    width: 633px;
     height: 56px;
     margin: 24px 64px;
     background-color: ${({theme}) => theme.COLORS.BACKGROUND_900};

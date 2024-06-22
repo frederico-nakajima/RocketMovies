@@ -5,59 +5,42 @@ export const Container = styled.div`
     height: 100vh;
     
     display: grid;
-    grid-template-columns: 250px auto;
-    grid-template-rows: 105px 128px auto 64px;
+    grid-template-columns: auto;
+    grid-template-rows: 105px 133px auto;
     grid-template-areas: 
-    "brand header"
-    "menu search"
-    "menu content"
-    "newnote content";
+    "header"
+    "newnote"
+    "content";
+   
 
-    background-color:${({theme}) => theme.COLORS.BACKGROUND_800}
-`;
-
-export const Brand = styled.div`
-    grid-area: brand;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color:${({theme}) => theme.COLORS.BACKGROUND_800};
 
 
-    border-bottom-width:1px ;
-    border-bottom-style:solid ;
-    border-bottom-color:${({theme}) => theme.COLORS.BACKGROUND_700} ;
-    background-color:${({theme}) => theme.COLORS.BACKGROUND_900} ;
+    .h1newnote{
+        grid-area:newnote ;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1167px;
+        margin: 0 auto;
 
-    >h1{
-        font-size: 24px;
-        color:${({theme}) => theme.COLORS.PINK} ;
+        >h1{
+            font-weight: 400;
+        }
+    }
+
+    ::-webkit-scrollbar{
+        width: 6px;
+            
+
+    }
+    ::-webkit-scrollbar-thumb{
+        background-color: ${({ theme }) => theme.COLORS.PINK};
+        border-radius: 6px;
     }
 `;
 
-export const Menu = styled.ul`
-    grid-area: menu;
-    background-color:${({theme}) => theme.COLORS.BACKGROUND_900};
 
-    padding-top: 64px;
-    text-align: center;
-
-    >li{
-        margin-bottom: 24px;
-    }
-    
-
-`;
-
-export const Search = styled.div`
-grid-area: search;
-padding: 64px 64px 0;
-`;
-
-export const Content = styled.div`
-    grid-area: content;  
-    padding:0 64px ;
-    
-`;
 
 export const NewNote = styled(Link)`
     grid-area: newnote;
@@ -65,10 +48,12 @@ export const NewNote = styled(Link)`
     background-color:${({theme}) => theme.COLORS.PINK};
     color:${({theme}) => theme.COLORS.BACKGROUND_900};
     border: none;
-    
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 48px;
+    width: 207px;
 
     svg{
         margin-right: 8px;
@@ -76,3 +61,17 @@ export const NewNote = styled(Link)`
 
     
 `;
+
+
+
+
+export const Content = styled.div`
+    grid-area: content;  
+    width: 1167px;
+    height: 617px;
+    padding-right: 16px;
+    margin: 0 auto 60px;
+    overflow-y: scroll;
+`;
+
+

@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 export const Container = styled.button`
     width: 100%;
-    background-color:${({theme}) => theme.COLORS.BACKGROUND_700};
+    background-color:${({theme}) => theme.COLORS.BACKGROUND_BROWN};
 
     border: none;
     border-radius: 10px;
 
-    padding: 22px;
+    padding: 32px;
     margin-bottom: 16px;
 
     >h1{
@@ -17,6 +17,12 @@ export const Container = styled.button`
         font-size: 24px;
         color:${({theme}) => theme.COLORS.WHITE};
     }
+    >p{
+        color:${({theme}) => theme.COLORS.GRAY_200};
+        text-align: justify;
+        margin: 15px 0;
+    }
+   
 
     >footer{
         width: 100%;
@@ -27,4 +33,14 @@ export const Container = styled.button`
 
 
 
+`;
+export const StarsContainer = styled.div`
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+
+    svg {
+        margin-right: 4px;
+        
+    }
 `;
